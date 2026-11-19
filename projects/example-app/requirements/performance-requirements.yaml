@@ -1,0 +1,27 @@
+requirements:
+  - id: PR-01
+    transactionId: T1
+    metric: response_time
+    target: 2000
+    unit: ms
+    percentile: P95
+    loadCondition: approved peak load
+    priority: MUST
+    status: READY
+    evidence:
+      - sourceType: BRD
+        sourceRef: input/BRD.md#performance-requirements
+        excerpt: T1 response time <= 2 seconds at P95 under approved peak load.
+  - id: PR-02
+    transactionId: T2
+    metric: response_time
+    target: 2000
+    unit: ms
+    percentile: P95
+    loadCondition: approved peak load
+    priority: MUST
+    status: READY
+    evidence:
+      - sourceType: BRD
+        sourceRef: input/BRD.md#performance-requirements
+        excerpt: T2 response time <= 2 seconds at P95 under approved peak load.

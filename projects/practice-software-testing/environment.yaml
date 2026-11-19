@@ -1,0 +1,16 @@
+name: practice-software-testing
+base_url: https://practicesoftwaretesting.com/
+# Source: BRD Section 12 / 17
+api_documentation_url: https://api.practicesoftwaretesting.com/api/documentation
+execution:
+  max_vus: MISSING
+  max_duration_minutes: MISSING
+monitoring:
+  enabled: MISSING
+credentials_env_vars: []
+safety:
+  # Source: BRD Section 12 — "No load, stress, spike or endurance test may be
+  # executed against the public shared service without explicit written
+  # authorisation from the service owner."
+  public_service_write_authorization_required: true
+  public_service_load_testing_permitted: MISSING

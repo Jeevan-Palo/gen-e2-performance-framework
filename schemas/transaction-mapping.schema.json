@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "priority", "approvedForPerformance", "steps", "evidence"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "name": {"type": "string", "minLength": 1},
+    "priority": {"enum": ["HIGH", "MEDIUM", "LOW"]},
+    "userType": {"type": "string"},
+    "trafficShare": {"type": "number", "minimum": 0, "maximum": 100},
+    "approvedForPerformance": {"type": "boolean"},
+    "evidence": {"type": "array", "items": {"type": "string"}},
+    "steps": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "action", "safeToLoad", "sideEffects", "evidence"], "properties": {"id": {"type": "string"}, "action": {"enum": ["http", "wait", "extract", "set-variable"]}, "method": {"enum": ["GET", "POST", "PUT", "PATCH", "DELETE"]}, "path": {"type": "string"}, "requestBody": {}, "expectedStatus": {"oneOf": [{"type": "integer"}, {"type": "array", "items": {"type": "integer"}}]}, "responseExtraction": {"type": "object"}, "safeToLoad": {"type": "boolean"}, "sideEffects": {"enum": ["NONE", "REVERSIBLE", "PERSISTENT", "EXTERNAL"]}, "evidence": {"type": "array", "items": {"type": "string"}}}}}
+  }
+}

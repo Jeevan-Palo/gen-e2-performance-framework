@@ -1,0 +1,13 @@
+{
+  "name": "gen-e2-performance-framework",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test dist/tests/*.test.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

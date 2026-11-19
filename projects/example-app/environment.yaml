@@ -1,0 +1,8 @@
+name: local-synthetic
+base_url: http://localhost:8080
+execution:
+  max_vus: 10
+  max_duration_minutes: 5
+monitoring:
+  enabled: false
+credentials_env_vars: []

@@ -1,0 +1,35 @@
+transactions:
+  - id: T1
+    name: Browse products
+    priority: HIGH
+    trafficShare: 60
+    approvedForPerformance: true
+    evidence:
+      - input/BRD.md#business-transactions
+    steps:
+      - id: T1-S1
+        action: http
+        method: GET
+        path: /products
+        expectedStatus: 200
+        safeToLoad: true
+        sideEffects: NONE
+        evidence:
+          - approved API specification — synthetic fixture
+  - id: T2
+    name: Search products
+    priority: HIGH
+    trafficShare: 40
+    approvedForPerformance: true
+    evidence:
+      - input/BRD.md#business-transactions
+    steps:
+      - id: T2-S1
+        action: http
+        method: GET
+        path: /products/search
+        expectedStatus: 200
+        safeToLoad: true
+        sideEffects: NONE
+        evidence:
+          - approved API specification — synthetic fixture

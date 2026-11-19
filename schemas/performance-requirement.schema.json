@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "transactionId", "metric", "priority", "status", "evidence"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "transactionId": {"type": "string", "minLength": 1},
+    "metric": {"enum": ["response_time", "throughput", "error_rate", "availability", "resource_utilisation", "stability"]},
+    "target": {"oneOf": [{"type": "number"}, {"type": "string", "minLength": 1}]},
+    "unit": {"type": "string"},
+    "percentile": {"enum": ["P50", "P90", "P95", "P99", "NA"]},
+    "loadCondition": {"type": "string"},
+    "priority": {"enum": ["MUST", "SHOULD", "COULD"]},
+    "status": {"enum": ["READY", "MISSING", "NEEDS_CLARIFICATION", "NOT_APPLICABLE"]},
+    "evidence": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["sourceType", "sourceRef"], "properties": {"sourceType": {"type": "string"}, "sourceRef": {"type": "string"}, "excerpt": {"type": "string"}, "capturedAt": {"type": "string"}, "confirmedBy": {"type": "string"}, "confirmationStatus": {"enum": ["CONFIRMED", "UNCONFIRMED"]}}}}
+  }
+}

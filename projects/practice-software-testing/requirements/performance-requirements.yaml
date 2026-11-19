@@ -1,0 +1,112 @@
+requirements:
+  - id: PST-NFR-001
+    transactionId: CAND-T1
+    metric: response_time
+    target: 2000
+    unit: ms
+    percentile: P95
+    loadCondition: approved peak load (not yet defined)
+    priority: MUST
+    status: NEEDS_CLARIFICATION
+    evidence:
+      - sourceType: BRD
+        sourceRef: input/Practice_Software_Testing_Performance_BRD_Sample.docx#section-9
+        excerpt: "PST-NFR-001 Product listing: p95 response time <= 2.0 seconds. PROPOSED - sample value; owner approval required."
+        confirmationStatus: UNCONFIRMED
+  - id: PST-NFR-002
+    transactionId: CAND-T1
+    metric: response_time
+    target: 2000
+    unit: ms
+    percentile: P95
+    loadCondition: approved peak load (not yet defined)
+    priority: MUST
+    status: NEEDS_CLARIFICATION
+    evidence:
+      - sourceType: BRD
+        sourceRef: input/Practice_Software_Testing_Performance_BRD_Sample.docx#section-9
+        excerpt: "PST-NFR-002 Product detail: p95 response time <= 2.0 seconds. PROPOSED - sample value; owner approval required."
+        confirmationStatus: UNCONFIRMED
+  - id: PST-NFR-003
+    transactionId: CAND-T2
+    metric: response_time
+    target: 2500
+    unit: ms
+    percentile: P95
+    loadCondition: approved peak load (not yet defined)
+    priority: MUST
+    status: NEEDS_CLARIFICATION
+    evidence:
+      - sourceType: BRD
+        sourceRef: input/Practice_Software_Testing_Performance_BRD_Sample.docx#section-9
+        excerpt: "PST-NFR-003 Product search: p95 response time <= 2.5 seconds. PROPOSED - sample value; owner approval required."
+        confirmationStatus: UNCONFIRMED
+  - id: PST-NFR-004
+    transactionId: CAND-T2
+    metric: response_time
+    target: 2500
+    unit: ms
+    percentile: P95
+    loadCondition: approved peak load (not yet defined)
+    priority: SHOULD
+    status: NEEDS_CLARIFICATION
+    evidence:
+      - sourceType: BRD
+        sourceRef: input/Practice_Software_Testing_Performance_BRD_Sample.docx#section-9
+        excerpt: "PST-NFR-004 Category / brand filter: p95 response time <= 2.5 seconds. PROPOSED - sample value; owner approval required."
+        confirmationStatus: UNCONFIRMED
+  - id: PST-NFR-005
+    transactionId: CAND-T3
+    metric: response_time
+    target: 2000
+    unit: ms
+    percentile: P95
+    loadCondition: approved peak load (not yet defined)
+    priority: SHOULD
+    status: NEEDS_CLARIFICATION
+    evidence:
+      - sourceType: BRD
+        sourceRef: input/Practice_Software_Testing_Performance_BRD_Sample.docx#section-9
+        excerpt: "PST-NFR-005 Login API: p95 response time <= 2.0 seconds. PROPOSED - sample value; owner approval required."
+        confirmationStatus: UNCONFIRMED
+  - id: PST-NFR-006
+    transactionId: CAND-T3
+    metric: response_time
+    target: 2500
+    unit: ms
+    percentile: P95
+    loadCondition: approved peak load (not yet defined)
+    priority: SHOULD
+    status: NEEDS_CLARIFICATION
+    evidence:
+      - sourceType: BRD
+        sourceRef: input/Practice_Software_Testing_Performance_BRD_Sample.docx#section-9
+        excerpt: "PST-NFR-006 Cart operations: p95 response time <= 2.5 seconds. PROPOSED - sample value; owner approval required."
+        confirmationStatus: UNCONFIRMED
+  - id: PST-NFR-007
+    transactionId: SYSTEM
+    metric: error_rate
+    target: 1
+    unit: "%"
+    percentile: NA
+    loadCondition: approved load test
+    priority: MUST
+    status: NEEDS_CLARIFICATION
+    evidence:
+      - sourceType: BRD
+        sourceRef: input/Practice_Software_Testing_Performance_BRD_Sample.docx#section-9
+        excerpt: "PST-NFR-007 Read/API transaction errors: error rate < 1% during approved load test. PROPOSED - sample value; owner approval required."
+        confirmationStatus: UNCONFIRMED
+  - id: PST-NFR-008
+    transactionId: SYSTEM
+    metric: availability
+    target: "no sustained service outage caused by the test"
+    percentile: NA
+    loadCondition: during test window
+    priority: MUST
+    status: NEEDS_CLARIFICATION
+    evidence:
+      - sourceType: BRD
+        sourceRef: input/Practice_Software_Testing_Performance_BRD_Sample.docx#section-9
+        excerpt: "PST-NFR-008 Availability during test window: No sustained service outage caused by the test. Qualitative safety requirement; define monitoring/abort rule."
+        confirmationStatus: UNCONFIRMED
